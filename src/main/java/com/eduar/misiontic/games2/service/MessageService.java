@@ -20,7 +20,7 @@ public class MessageService {
     public List<Message> getAll(){
         return messageRepository.getAll();
     }
-    public Optional<Message> getGames(int id){
+    public Optional<Message> getComputer(int id){
         return messageRepository.getMessage(id);
     }
     public Message save(Message p){
@@ -42,8 +42,8 @@ public class MessageService {
                 if (p.getMessageText() != null) {
                     q.get().setMessageText(p.getMessageText());
                 }
-                if (p.getGame() != null) {
-                    q.get().setGame(p.getGame());
+                if (p.getComputer() != null) {
+                    q.get().setComputer(p.getComputer());
                 }
                 if (p.getClient() != null) {
                     q.get().setClient(p.getClient());

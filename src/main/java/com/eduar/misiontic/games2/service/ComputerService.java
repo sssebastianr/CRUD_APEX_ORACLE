@@ -2,7 +2,7 @@ package com.eduar.misiontic.games2.service;
 
 
 import com.eduar.misiontic.games2.entities.Computer;
-import com.eduar.misiontic.games2.repository.GameRepository;
+import com.eduar.misiontic.games2.repository.ComputerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,32 +10,32 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class GameService {
+public class ComputerService {
 
     @Autowired
-    public GameRepository gameRepository;
+    public ComputerRepository computerRepository;
 
     public List<Computer> getAll(){
-        return gameRepository.getAll();
+        return computerRepository.getAll();
     }
-    public Optional<Computer> getGames(int id){
-        return gameRepository.getGames(id);
+    public Optional<Computer> getComputer(int id){
+        return computerRepository.getComputer(id);
     }
     public Computer save(Computer p){
         if(p.getId()==null){
-            return gameRepository.save(p);
+            return computerRepository.save(p);
         }else{
-            Optional<Computer> e=gameRepository.getGames(p.getId());
+            Optional<Computer> e=computerRepository.getComputer(p.getId());
             if(e.isPresent()){
                 return p;
             }else{
-                return gameRepository.save(p);
+                return computerRepository.save(p);
             }
         }
     }
     public Computer update(Computer p) {
         if (p.getId() != null) {
-            Optional<Computer> q = gameRepository.getGames(p.getId());
+            Optional<Computer> q = computerRepository.getComputer(p.getId());
             if (q.isPresent()) {
                 if (p.getName() != null) {
                     q.get().setName(p.getName());
@@ -59,7 +59,7 @@ public class GameService {
                     q.get().setReservations(p.getReservations());
                 }
 
-                gameRepository.save(q.get());
+                computerRepository.save(q.get());
                 return q.get();
             } else {
                 return p;
@@ -71,9 +71,9 @@ public class GameService {
 
     public boolean delete(int id){
         boolean flag=false;
-        Optional<Computer>p=gameRepository.getGames(id);
+        Optional<Computer>p=computerRepository.getComputer(id);
         if(p.isPresent()){
-            gameRepository.delete(p.get());
+            computerRepository.delete(p.get());
             flag=true;
         }
         return flag;

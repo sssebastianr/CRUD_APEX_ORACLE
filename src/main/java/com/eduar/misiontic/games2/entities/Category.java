@@ -46,11 +46,11 @@ public class Category implements Serializable {
     }
 
 
-    public List<Computer> getGames() {
+    public List<Computer> getComputer() {
         return computer;
     }
 
-    public void setGames(List<Computer> computer) {
+    public void setComputer(List<Computer> computer) {
         this.computer = computer;
     }
 }

@@ -57,8 +57,8 @@ public class ReservationService {
                 if(reservation.getStatus()!=null){
                     e.get().setStatus(reservation.getStatus());
                 }
-                if(reservation.getGame()!=null){
-                    e.get().setGame(reservation.getGame());
+                if(reservation.getComputer()!=null){
+                    e.get().setComputer(reservation.getComputer());
                 }
                 if(reservation.getClient()!=null){
                     e.get().setClient(reservation.getClient());

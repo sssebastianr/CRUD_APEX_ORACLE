@@ -29,11 +29,11 @@ public class Reservation implements Serializable {
     private Integer score;
 
 
-    public Computer getGame() {
+    public Computer getComputer() {
         return computer;
     }
 
-    public void setGame(Computer computer) {
+    public void setComputer(Computer computer) {
         this.computer = computer;
     }
 
