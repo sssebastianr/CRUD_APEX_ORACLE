@@ -15,7 +15,7 @@ public class Computer implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
-    private String developer;
+    private String brand;
     @Column(name = "years")
     private Integer year;
     private String description;
@@ -58,11 +58,11 @@ public class Computer implements Serializable {
     }
 
     public String getDeveloper() {
-        return developer;
+        return brand;
     }
 
-    public void setDeveloper(String developer) {
-        this.developer = developer;
+    public void setDeveloper(String brand) {
+        this.brand = brand;
     }
 
     public String getName() {
