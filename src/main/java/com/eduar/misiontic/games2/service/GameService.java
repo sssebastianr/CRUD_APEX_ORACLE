@@ -40,8 +40,8 @@ public class GameService {
                 if (p.getName() != null) {
                     q.get().setName(p.getName());
                 }
-                if (p.getDeveloper() != null) {
-                    q.get().setDeveloper(p.getDeveloper());
+                if (p.getBrand() != null) {
+                    q.get().setBrand(p.getBrand());
                 }
                 if (p.getYear() != null) {
                     q.get().setYear(p.getYear());

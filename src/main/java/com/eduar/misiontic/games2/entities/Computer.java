@@ -57,11 +57,11 @@ public class Computer implements Serializable {
         this.year = year;
     }
 
-    public String getDeveloper() {
+    public String getBrand() {
         return brand;
     }
 
-    public void setDeveloper(String brand) {
+    public void setBrand(String brand) {
         this.brand = brand;
     }
 
