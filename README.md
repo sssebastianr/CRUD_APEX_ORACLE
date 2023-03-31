@@ -1,6 +1,6 @@
 # CRUD-APEX_ORACLE
 
-Servicios Back-End en JAVA que alojan la infmormacion en las tablas de la nube de ORACLE y que a traves de endpoints permite funcionalidades como:
+Servicios Back-End en JAVA que alojan la infmormacion en las bases de datos MySQL de la nube de ORACLE y que a traves de endpoints permite funcionalidades como:
 
 - Creacion de categorias
 - Creacion de clientes
